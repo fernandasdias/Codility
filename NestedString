@@ -1,0 +1,32 @@
+/*Solution to codility "Nesting" problem
+Author: Fernanda Dias
+ */
+
+using System;
+using System.Collections;
+
+class Solution {
+    public int solution(string S) {
+    
+    Stack stack = new Stack();
+    
+        foreach (char x in S)
+        {
+            if (x == '(')
+                stack.Push(x);
+            else if(x == ')')
+            {
+                if (stack.Count == 0)
+                    return 0;
+                else 
+                {
+                    char y = Convert.ToChar(stack.Pop());
+                }   
+            }
+        }
+        if (stack.Count > 0)
+        return 0;
+    
+    return 1;
+    }
+}
